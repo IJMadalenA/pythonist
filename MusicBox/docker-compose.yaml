@@ -1,0 +1,8 @@
+version: "3"
+services:
+  jukebox:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./output:/app/output
