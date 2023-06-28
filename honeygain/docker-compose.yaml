@@ -1,0 +1,7 @@
+version: '3.9'
+
+services:
+  honeygain:
+    image: honeygain/honeygain
+    container_name: Honeygain
+    command: -tou-accept -email xxxxxxxxxxxxx -pass xxxxxxxxxxxxxxxxx -device HoneyGain

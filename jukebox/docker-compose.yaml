@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+  jukebox:
+    container_name: JukeBox
+    hostname: jukebox
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./data:/jukebox/data
+      - ./samples:/jukebox/samples
