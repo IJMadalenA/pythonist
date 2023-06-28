@@ -1,5 +1,5 @@
 # Establecer la imagen base
-FROM ubuntu:latest
+FROM nvidia/cuda:10.0-base-ubuntu18.04
 
 # Instalar dependencias del sistema operativo
 RUN apt-get update \
@@ -24,18 +24,19 @@ RUN conda create --name jukebox python=3.7.5 && \
 SHELL ["conda", "run", "-n", "jukebox", "/bin/bash", "-c"]
 
 # Clonar el repositorio Jukebox
-RUN git clone https://github.com/openai/jukebox.git
 WORKDIR /jukebox
+
+# RUN git clone https://github.com/openai/jukebox.git
+
+COPY ./ ./
 
 # Instalar las dependencias del proyecto
 RUN conda install mpi4py=3.0.3 && \
     conda install cudatoolkit=10.0 && \
     conda install pytorch=1.4 -c pytorch && \
     conda install av=7.0.01 -c conda-forge && \
-    pip install torch --no-cache-dir && \
-    pip install torchvision --no-cache-dir && \
-    conda install PyTorch -c PyTorch && \
-    conda install torchvision
+    conda install torchvision && \
+    conda install PyTorch -c PyTorch
 
 RUN pip install -r requirements.txt
 RUN pip install -e .
@@ -43,4 +44,5 @@ RUN pip install -e .
 # Configurar el punto de entrada
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
+
 ENTRYPOINT ["/entrypoint.sh"]

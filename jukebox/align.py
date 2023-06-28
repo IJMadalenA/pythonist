@@ -5,11 +5,11 @@ Get alignment from attn values
 """
 import numpy as np
 import torch as t
-from jukebox.jukebox.utils.torch_utils import assert_shape, empty_cache
-from jukebox.jukebox.hparams import Hyperparams
-from jukebox.jukebox.make_models import make_model
-from jukebox.jukebox.save_html import save_html
-from jukebox.jukebox.utils.sample_utils import get_starts
+from jukebox.utils.torch_utils import assert_shape, empty_cache
+from jukebox.hparams import Hyperparams
+from jukebox.make_models import make_model
+from jukebox.save_html import save_html
+from jukebox.utils.sample_utils import get_starts
 import fire
 
 
@@ -101,7 +101,7 @@ def save_alignment(model, device, hps):
 
 
 def run(model, port=29500, **kwargs):
-    from jukebox.jukebox.utils.dist_utils import setup_dist_from_mpi
+    from jukebox.utils.dist_utils import setup_dist_from_mpi
     rank, local_rank, device = setup_dist_from_mpi(port=port)
     hps = Hyperparams(**kwargs)
 
