@@ -25,6 +25,10 @@
       {
         "type": "linkedin",
         "URL": "https://linkedin.com/in/ijmadalena"
+      },
+      {
+        "type": "github",
+        "URL": "https://github.com/IJMadalenA"
       }
     ]
   },
@@ -161,6 +165,10 @@
         {
           "URL": "https://linkedin.com/in/ijmadalena",
           "type": "linkedin"
+        },
+        {
+          "URL": "https://github.com/IJMadalenA",
+          "type": "github"
         }
       ],
       "contactMails": [
