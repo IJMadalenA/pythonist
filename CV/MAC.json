@@ -170,7 +170,19 @@
     "preferences": {
       "preferredCompetences": [
         {
+          "name": "Ansible",
+          "type": "technology"
+        },
+        {
           "name": "Django",
+          "type": "technology"
+        },
+        {
+          "name": "Docker",
+          "type": "technology"
+        },
+        {
+          "name": "Git",
           "type": "technology"
         },
         {
@@ -178,11 +190,31 @@
           "type": "technology"
         },
         {
+          "name": "Google Cloud",
+          "type": "technology"
+        },
+        {
+          "name": "Kubernetes",
+          "type": "technology"
+        },
+        {
           "name": "PyCharm",
           "type": "technology"
         },
         {
+          "name": "Pytest",
+          "type": "technology"
+        },
+        {
           "name": "Python",
+          "type": "technology"
+        },
+        {
+          "name": "SonarQube",
+          "type": "technology"
+        },
+        {
+          "name": "Terraform",
           "type": "technology"
         }
       ],
