@@ -186,6 +186,10 @@
           "type": "technology"
         },
         {
+          "name": "Github",
+          "type": "technology"
+        },
+        {
           "name": "Go",
           "type": "technology"
         },
