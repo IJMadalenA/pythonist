@@ -190,11 +190,19 @@
           "type": "technology"
         },
         {
+          "name": "Kubernetes",
+          "type": "technology"
+        },
+        {
           "name": "PyCharm",
           "type": "technology"
         },
         {
           "name": "Python",
+          "type": "technology"
+        },
+        {
+          "name": "SonarQube",
           "type": "technology"
         },
         {
