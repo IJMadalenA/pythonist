@@ -170,11 +170,23 @@
     "preferences": {
       "preferredCompetences": [
         {
+          "name": "Django",
+          "type": "technology"
+        },
+        {
           "name": "Go",
           "type": "technology"
         },
         {
+          "name": "Google Cloud",
+          "type": "technology"
+        },
+        {
           "name": "PyCharm",
+          "type": "technology"
+        },
+        {
+          "name": "Python",
           "type": "technology"
         }
       ],
