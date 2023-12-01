@@ -165,6 +165,12 @@
       ],
       "contactMails": [
         "IJMadalena@outlook.com"
+      ],
+      "phoneNumbers": [
+        {
+          "number": "673282937",
+          "countryCode": "+34"
+        }
       ]
     },
     "preferences": {
