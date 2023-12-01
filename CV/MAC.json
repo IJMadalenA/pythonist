@@ -170,6 +170,10 @@
     "preferences": {
       "preferredCompetences": [
         {
+          "name": "Ansible",
+          "type": "technology"
+        },
+        {
           "name": "Django",
           "type": "technology"
         },
