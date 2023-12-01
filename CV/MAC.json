@@ -168,6 +168,12 @@
       ]
     },
     "preferences": {
+      "preferredCompetences": [
+        {
+          "name": "Go",
+          "type": "technology"
+        }
+      ],
       "preferredRoles": [
         "Backend Developer"
       ]
