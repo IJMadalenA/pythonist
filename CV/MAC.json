@@ -198,6 +198,10 @@
           "type": "technology"
         },
         {
+          "name": "Pytest",
+          "type": "technology"
+        },
+        {
           "name": "Python",
           "type": "technology"
         },
