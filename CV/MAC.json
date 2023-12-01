@@ -172,6 +172,10 @@
         {
           "name": "Go",
           "type": "technology"
+        },
+        {
+          "name": "PyCharm",
+          "type": "technology"
         }
       ],
       "preferredRoles": [
