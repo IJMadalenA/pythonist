@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import os
 import random
+from git import Repo
 import subprocess
 from datetime import datetime
 
@@ -8,17 +9,33 @@ script_dir = os.path.dirname(os.path.abspath(__file__))
 os.chdir(script_dir)
 
 
+def validate_file():
+    if not os.path.exists("number.txt"):
+        with open("number.txt", "w") as f:
+            f.write("0")
+            f.close()
+
+
 def read_number():
+    print("Reading number from file...")
+    validate_file()
     with open("number.txt", "r") as f:
         return int(f.read().strip())
 
 
 def write_number(num):
+    print("Writing number to file...")
+    validate_file()
+    with open("number.txt", "w") as f:
+        f.write("0")
+        f.close()
+
     with open("number.txt", "w") as f:
         f.write(str(num))
 
 
 def generate_random_commit_message():
+    print("Generating random commit message...")
     from transformers import pipeline
 
     generator = pipeline(
@@ -55,13 +72,9 @@ def generate_random_commit_message():
 
 def git_commit():
     # Stage the changes
+    print("Staging changes...")
     subprocess.run(["git", "add", "number.txt"])
-    # Create commit with current date
-    if "FANCY_JOB_USE_LLM" in os.environ:
-        commit_message = generate_random_commit_message()
-    else:
-        date = datetime.now().strftime("%Y-%m-%d")
-        commit_message = f"Update number: {date}"
+    commit_message = generate_random_commit_message()
     subprocess.run(["git", "commit", "-m", commit_message])
 
 
