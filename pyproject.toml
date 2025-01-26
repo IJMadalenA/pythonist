@@ -1,0 +1,19 @@
+[project]
+name = "contribution-generator"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "IJMadalenA"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "torch (>=2.5.1,<3.0.0)",
+    "transformers (>=4.48.1,<5.0.0)",
+    "python-dotenv (>=1.0.1,<2.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
