@@ -1,5 +1,6 @@
 import os
 import urllib.request
+from urllib.error import URLError
 
 import segno
 
@@ -72,7 +73,7 @@ def generate_artistic_qr(
             background = background_source
             file_ext = os.path.splitext(background_source)[-1].lower()
 
-        # Choose appropriate output format based on background type
+        # Choose the appropriate output format based on background type
         output_format = "gif" if file_ext in [".gif"] else "png"
         target_file = f"{filename}.{output_format}"
 
@@ -85,7 +86,7 @@ def generate_artistic_qr(
 
         return target_file
 
-    except urllib.error.URLError:
+    except URLError:
         return "Error: Unable to download the background image. Check the URL."
     except Exception as e:
         return f"Error generating artistic QR code: {str(e)}"
