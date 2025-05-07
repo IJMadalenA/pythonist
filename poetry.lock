@@ -860,6 +860,18 @@ testing = ["h5py (>=3.7.0)", "huggingface-hub (>=0.12.1)", "hypothesis (>=6.70.2
 torch = ["safetensors[numpy]", "torch (>=1.10)"]
 
 [[package]]
+name = "segno"
+version = "1.6.6"
+description = "QR Code and Micro QR Code generator for Python"
+optional = false
+python-versions = ">=3.5"
+groups = ["main"]
+files = [
+    { file = "segno-1.6.6-py3-none-any.whl", hash = "sha256:28c7d081ed0cf935e0411293a465efd4d500704072cdb039778a2ab8736190c7" },
+    { file = "segno-1.6.6.tar.gz", hash = "sha256:e60933afc4b52137d323a4434c8340e0ce1e58cec71439e46680d4db188f11b3" },
+]
+
+[[package]]
 name = "setuptools"
 version = "75.8.0"
 description = "Easily download, build, install, upgrade, and uninstall Python packages"
@@ -1133,4 +1145,4 @@ zstd = ["zstandard (>=0.18.0)"]
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.12"
-content-hash = "ad3bd972d2e8eaf7fd284be73cff4269abc0a0c8cc7cf944eaec1b3b0feafde6"
+content-hash = "f08bb33540ab2f54ba4fa16d46cbd3d2dbfd9832841c835291c3f98bff9e6f47"
